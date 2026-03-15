@@ -12,6 +12,9 @@ const couponRouter = ( app ) => {
 
     // Update a coupon by Id
     app.put('/coupons/:id', couponController.updateCouponById);
+
+    // Delete a coupon by Id
+    app.delete('/coupons/:id', couponController.destroyCoupon);
     
 }
 

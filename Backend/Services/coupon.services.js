@@ -55,9 +55,20 @@ const updateById = async (id, updateData) => {
     }
 }
 
+const deleteById = async (id) => {
+    try {
+        const response = await Coupon.findByIdAndDelete(id);
+        return response;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 module.exports = {
     create,
     getAll,
     getById,
-    updateById
+    updateById,
+    deleteById
 }

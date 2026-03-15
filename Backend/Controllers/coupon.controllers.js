@@ -67,9 +67,24 @@ const updateCouponById = async (req, res) => {
     }
 }
 
+// Destroy a coupon by its Id
+const destroyCoupon = async (req, res) => {
+    try {
+        const response = await couponService.deleteById(req.params.id);
+        successResponseBody.data = response;
+        successResponseBody.message = "Coupon deleted successfully.";
+        res.status(200).json(successResponseBody);
+
+    } catch(error) {
+        errorResponseBody.error = error;
+        errorResponseBody.message = "Failed to delete the coupon.";
+        res.status(500).json(errorResponseBody);
+    }
+}
 module.exports = {
     createCoupon,
     getAllCoupons,
     getCouponById,
-    updateCouponById
+    updateCouponById,
+    destroyCoupon
 }
