@@ -28,7 +28,18 @@ const getAll = async () => {
     }
 }
 
+const getById = async (id) => {
+    try {
+        const coupon = await Coupon.findById(id);
+        return coupon;
+    } catch (error) {
+        console.log(error);
+        throw error;
+    }
+}
+
 module.exports = {
     create,
-    getAll
+    getAll,
+    getById
 }

@@ -1,6 +1,7 @@
 const { successResponseBody, errorResponseBody } = require('../Utils/responsebody');
 const couponService = require('../Services/coupon.services.js');
 
+// Create a new coupon
 const createCoupon = async (req, res) => {
     try {
         const response = await couponService.create(req.body);
@@ -18,6 +19,7 @@ const createCoupon = async (req, res) => {
     }
 }
 
+// Get all coupons
 const getAllCoupons = async (req, res) => {
     try {
         const response = await couponService.getAll();
@@ -31,7 +33,22 @@ const getAllCoupons = async (req, res) => {
     }
 }
 
+// Get a coupon by its Id
+const getCouponById = async (req, res) => {
+    try {
+        const response = await couponService.getById(req.params.id);
+        successResponseBody.data = response;
+        successResponseBody.message = "Coupon fetched successfully.";
+        res.status(200).json(successResponseBody);
+    } catch(error) {
+        errorResponseBody.error = error;
+        errorResponseBody.message = "Failed to fetch the coupon.";
+        res.status(500).json(errorResponseBody);
+    }
+}
+
 module.exports = {
     createCoupon,
-    getAllCoupons
+    getAllCoupons,
+    getCouponById
 }

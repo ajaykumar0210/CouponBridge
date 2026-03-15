@@ -6,6 +6,10 @@ const couponRouter = ( app ) => {
 
     // Get all coupons
     app.get('/coupons', couponController.getAllCoupons);
+
+    // Get a coupon by Id
+    app.get('/coupons/:id', couponController.getCouponById);
+    
 }
 
 module.exports = couponRouter;
