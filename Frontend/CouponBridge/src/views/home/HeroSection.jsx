@@ -1,5 +1,5 @@
 import './HeroSection.css'
-import './index.css'
+import '../../index.css'
 import Button from '@mui/material/Button';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
 function HeroSection(){

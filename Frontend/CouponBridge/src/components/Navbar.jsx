@@ -1,5 +1,5 @@
 import './Navbar.css';
-import './index.css';
+import '../index.css';
 import Button from '@mui/material/Button';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import SellIcon from '@mui/icons-material/Sell';

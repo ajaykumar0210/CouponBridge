@@ -1,5 +1,5 @@
 import './Footer.css';
-import './index.css';
+import '../index.css';
 import SellIcon from '@mui/icons-material/Sell';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import GitHubIcon from '@mui/icons-material/GitHub';

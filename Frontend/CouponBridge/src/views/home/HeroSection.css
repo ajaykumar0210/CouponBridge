@@ -1,5 +1,5 @@
 .hero {
-    background-image: url('./assets/images/cart.jpg');
+    background-image: url('../../assets/images/cart.jpg');
     height: 90vh;
     width: 100%;
     background-size:cover;
