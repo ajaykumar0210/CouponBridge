@@ -2,7 +2,11 @@ import './HeroSection.css'
 import '../../index.css'
 import Button from '@mui/material/Button';
 import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
+
+import { useNavigate } from 'react-router-dom';
+
 function HeroSection(){
+    const navigate = useNavigate();
     return(
         <>
             <div className="hero">
@@ -19,7 +23,7 @@ function HeroSection(){
                         Every coupon is verified before purchase.
                     </p>
                     <div className="hero-navigate">
-                        <div className="browse">Browse Coupons <KeyboardDoubleArrowRightIcon/></div>
+                        <div className="browse" onClick={() => navigate('/coupons')}>Browse Coupons <KeyboardDoubleArrowRightIcon/></div>
                         <Button variant="contained" className="selling-btn">Start Selling</Button>
                     </div>
                 </div>
